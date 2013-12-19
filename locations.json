@@ -1,0 +1,94 @@
+{ 
+	"tvshows": [
+
+    {
+        "name": "American Dad",
+        "location": "/media/third/tv3/American Dad"
+    },
+    {
+        "name": "Family Guy",
+        "location": "/media/third/tv3/Family Guy"
+    },
+    {
+    	"name": "How I Met Your Mother",
+    	"location": "/media/third/tv3/How I Met Your Mother"
+    },
+    {
+        "name": "Arrow",
+        "location": "/media/third/tv3/Arrow"
+    },
+    {
+        "name": "Game of Thrones",
+        "location": "/media/third/tv3/Game Of Thrones"
+    },
+    {
+        "name": "Grey Anatomy",
+        "location": "/media/third/tv3/Greys Anatomy"
+    },
+    {
+        "name": "Hannibal",
+        "location": "/media/third/tv3/Hannibal"
+    },
+    {
+        "name": "Homeland",
+        "location": "/media/third/tv3/Homeland"
+    },
+    {
+        "name": "Modern Family",
+        "location": "/media/third/tv3/Modern Family"
+    },
+    {
+        "name": "Marvel Agents of shield.",
+        "location": "/media/third/tv3/Marvels Agents of S.H.I.E.L.D."
+    },
+    {
+        "name": "New Girl",
+        "location": "/media/third/tv3/New Girl"
+    },
+    {
+        "name": "Person of Interest",
+        "location": "/media/third/tv3/Person Of Interest"
+    },
+    {
+        "name": "Ray Donovan",
+        "location": "/media/third/tv3/Ray Donovan"
+    },
+    {
+        "name": "Revolution",
+        "location": "/media/third/tv3/Revolution"
+    },
+    {
+        "name": "Sleepy Hollow",
+        "location": "/media/third/tv3/Sleepy Hollow"
+    },
+    {
+        "name": "South Park",
+        "location": "/media/third/tv3/South Park"
+    },
+    {
+        "name": " The Big Bang Theory",
+        "location": "/media/third/tv3/The Big Bang Theory"
+    },
+    {
+        "name": "The Blacklist",
+        "location": "/media/third/tv3/The Blacklist"
+    },
+    {
+        "name": "The Simpsons",
+        "location": "/media/third/tv3/The Simpsons"
+    },
+    {
+        "name": "The Walking Dead",
+        "location": "/media/third/tv3/The Walking Dead"
+    },
+    {
+        "name": "True Blood",
+        "location": "/media/third/tv3/True Blood"
+    },
+    {
+        "name": "Two and a Half Men",
+        "location": "/media/third/tv3/Two And A Half Men"
+    }
+
+]
+}
