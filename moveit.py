@@ -27,19 +27,18 @@ def main():
 
 				if os.path.isdir(foo):
 					# get the file from the folder and remove it
-					print "FOLDER " + foo
 					os.chdir(foo)
 					isItHere = os.listdir(".")
 					for l in isItHere:
 						matchObj = re.search(fileName, l, re.IGNORECASE)
 						if matchObj:
-							print l + " goes " + goHere
 							shutil.move(l, goHere)
+							os.chdir("../")
+							shutil.rmtree(foo)
 
 				else:
 					if matchFile:
 						# move that shit (foo to goHere)
-						print foo + " goes " + goHere
 						shutil.move(foo, goHere)
 				
 				
