@@ -4,7 +4,6 @@ import os
 import json
 import shutil
 
-
 json_data = open('locations.json')
 data = json.load(json_data)
 path = '.'
@@ -23,15 +22,36 @@ def main():
 			matchObj = re.search( reggie, foo, re.IGNORECASE)
 			if matchObj:
 				fileName = reggie + ".*(.mp4|.mkv|.avi)"
+				
 				matchFile = re.search(fileName, foo, re.IGNORECASE)
+				
 
 				if os.path.isdir(foo):
 					# get the file from the folder and remove it
+					print "FOLDER " + foo
 					os.chdir(foo)
 					isItHere = os.listdir(".")
+					rarFile = reggie + ".*(.rar)"
+
 					for l in isItHere:
+						rarMatch = re.search(rarFile, l, re.IGNORECASE)
 						matchObj = re.search(fileName, l, re.IGNORECASE)
-						if matchObj:
+
+						if rarMatch:
+							print "UNRAR " + l
+							os.system("unrar x -e " + l)
+							os.system("rm " + l)
+							isItHere = os.listdir(".")
+							for b in isItHere:
+								matchObj = re.search(fileName, b, re.IGNORECASE)
+								if matchObj:
+									shutil.move(b, goHere)
+									os.chdir("../")
+									shutil.rmtree(foo)
+							
+
+						elif matchObj:
+							print l + " goes " + goHere
 							shutil.move(l, goHere)
 							os.chdir("../")
 							shutil.rmtree(foo)
@@ -39,6 +59,7 @@ def main():
 				else:
 					if matchFile:
 						# move that shit (foo to goHere)
+						print foo + " goes " + goHere
 						shutil.move(foo, goHere)
 				
 				
