@@ -31,7 +31,7 @@ def main():
 					print "FOLDER " + foo
 					os.chdir(foo)
 					isItHere = os.listdir(".")
-					rarFile = reggie + ".*(.rar)"
+					rarFile = "^.*(.rar)"
 
 					for l in isItHere:
 						rarMatch = re.search(rarFile, l, re.IGNORECASE)
@@ -55,12 +55,14 @@ def main():
 							shutil.move(l, goHere)
 							os.chdir("../")
 							shutil.rmtree(foo)
+							os.system('sh ~/Dropbox/WIP/homeServer/updatexbmc.sh')
 
 				else:
 					if matchFile:
 						# move that shit (foo to goHere)
 						print foo + " goes " + goHere
 						shutil.move(foo, goHere)
+						os.system('sh ~/Dropbox/WIP/homeServer/updatexbmc.sh')
 				
 				
 		count = count + 1
